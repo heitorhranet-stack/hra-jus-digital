@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRA Jus Digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --navy:#0B1A2E;
+  --navy2:#0F2340;
+  --accent:#2A6FC9;
+  --accent2:#1A5AAA;
+  --silver:#8AAFD4;
+  --light:#D0E4F7;
+  --white:#F4F8FD;
+  --red:#C0392B;
+  --gold:#C9A84C;
+  --ff-title:'Libre Baskerville',Georgia,serif;
+  --ff-body:'IBM Plex Sans','Segoe UI',sans-serif;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--navy);
+  font-family:var(--ff-body);
+  color:var(--white);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ── GRID BG ── */
+body::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(42,111,201,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(42,111,201,.07) 1px,transparent 1px);
+  background-size:60px 60px;
+  pointer-events:none;
+  z-index:0;
+}
+
+.page{
+  position:relative;
+  z-index:1;
+  max-width:480px;
+  margin:0 auto;
+  padding:40px 20px 60px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+}
+
+/* ── HEADER ── */
+.header{
+  text-align:center;
+  margin-bottom:32px;
+  animation:fadeUp .6s ease both;
+}
+.logo-ring{
+  width:88px;height:88px;
+  border-radius:50%;
+  border:2.5px solid var(--accent);
+  background:var(--navy2);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;
+  font-size:38px;
+  box-shadow:0 0 0 6px rgba(42,111,201,.12);
+}
+.brand-name{
+  font-family:var(--ff-title);
+  font-size:22px;
+  letter-spacing:3px;
+  color:var(--white);
+}
+.brand-tagline{
+  font-size:12px;
+  color:var(--silver);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-top:5px;
+}
+.verified{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(42,111,201,.15);
+  border:1px solid rgba(42,111,201,.3);
+  border-radius:20px;
+  padding:3px 12px;
+  font-size:11px;
+  color:var(--accent);
+  margin-top:10px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+/* ── LANG SELECTOR ── */
+.lang-bar{
+  display:flex;
+  gap:8px;
+  margin-bottom:28px;
+  animation:fadeUp .6s .1s ease both;
+}
+.lang-btn{
+  flex:1;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(42,111,201,.2);
+  border-radius:10px;
+  padding:10px 6px;
+  text-align:center;
+  cursor:pointer;
+  transition:all .25s;
+  font-family:var(--ff-body);
+}
+.lang-btn .flag{font-size:20px;display:block;margin-bottom:3px;}
+.lang-btn .lname{font-size:10px;color:var(--silver);letter-spacing:.5px;}
+.lang-btn.active{
+  background:rgba(42,111,201,.2);
+  border-color:var(--accent);
+}
+.lang-btn.active .lname{color:var(--light);}
+.lang-btn:hover{background:rgba(42,111,201,.15);border-color:rgba(42,111,201,.5);}
+
+/* ── SECTION LABEL ── */
+.sec-label{
+  width:100%;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(138,175,212,.5);
+  margin-bottom:10px;
+  padding-left:2px;
+}
+
+/* ── HERO CARD — DIAGNÓSTICO ── */
+.diag-card{
+  width:100%;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);
+  border-radius:16px;
+  padding:28px 24px;
+  margin-bottom:12px;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .2s,box-shadow .2s;
+  text-decoration:none;
+  display:block;
+  animation:fadeUp .6s .2s ease both;
+}
+.diag-card::before{
+  content:'';
+  position:absolute;
+  top:-40px;right:-40px;
+  width:160px;height:160px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  pointer-events:none;
+}
+.diag-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(42,111,201,.35);}
+.diag-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(255,255,255,.18);
+  border-radius:20px;
+  padding:3px 12px;
+  font-size:10px;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  color:#fff;
+  margin-bottom:14px;
+}
+.diag-title{
+  font-family:var(--ff-title);
+  font-size:24px;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:10px;
+}
+.diag-sub{
+  font-size:13px;
+  color:rgba(255,255,255,.82);
+  line-height:1.6;
+  margin-bottom:18px;
+}
+.diag-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--navy);
+  color:var(--light);
+  border-radius:8px;
+  padding:11px 20px;
+  font-size:12px;font-weight:600;
+  letter-spacing:1px;text-transform:uppercase;
+}
+.diag-free{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:11px;color:rgba(255,255,255,.7);
+  margin-left:14px;
+}
+
+/* ── LINK CARD ── */
+.link-card{
+  width:100%;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(42,111,201,.18);
+  border-radius:14px;
+  padding:18px 20px;
+  margin-bottom:10px;
+  display:flex;align-items:center;gap:16px;
+  cursor:pointer;
+  transition:all .2s;
+  text-decoration:none;
+  color:var(--white);
+  animation:fadeUp .6s .3s ease both;
+}
+.link-card:hover{
+  background:rgba(42,111,201,.12);
+  border-color:rgba(42,111,201,.4);
+  transform:translateY(-2px);
+}
+.card-icon{
+  width:46px;height:46px;min-width:46px;
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+}
+.icon-book{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.3);}
+.icon-kit{background:rgba(42,111,201,.15);border:1px solid rgba(42,111,201,.3);}
+.icon-wa{background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.3);}
+.icon-about{background:rgba(138,175,212,.1);border:1px solid rgba(138,175,212,.2);}
+
+.card-body{flex:1;}
+.card-title{font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px;}
+.card-sub{font-size:12px;color:var(--silver);line-height:1.4;}
+.card-badge{
+  font-size:10px;font-weight:600;
+  padding:3px 9px;border-radius:20px;
+  letter-spacing:.5px;white-space:nowrap;
+}
+.badge-free{background:rgba(39,174,96,.2);color:#6FCFA0;border:1px solid rgba(39,174,96,.3);}
+.badge-paid{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.3);}
+.badge-new{background:rgba(42,111,201,.2);color:var(--light);border:1px solid rgba(42,111,201,.3);}
+
+.card-arrow{color:rgba(138,175,212,.4);font-size:18px;margin-left:4px;}
+
+/* ── EBOOKS SECTION ── */
+.ebooks-grid{
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:10px;
+  animation:fadeUp .6s .35s ease both;
+}
+.ebook-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(42,111,201,.18);
+  border-radius:12px;
+  padding:16px 14px;
+  cursor:pointer;
+  transition:all .2s;
+  text-decoration:none;
+  color:var(--white);
+}
+.ebook-card:hover{background:rgba(42,111,201,.1);border-color:rgba(42,111,201,.4);transform:translateY(-2px);}
+.ebook-flag{font-size:22px;margin-bottom:8px;}
+.ebook-law{
+  font-size:10px;font-weight:600;
+  color:var(--accent);
+  letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:5px;
+}
+.ebook-title{font-size:13px;font-weight:600;color:var(--white);line-height:1.3;margin-bottom:6px;}
+.ebook-price{font-family:var(--ff-title);font-size:16px;color:var(--gold);}
+.ebook-from{font-size:10px;color:var(--silver);}
+
+/* ── ABOUT SECTION ── */
+.about-card{
+  width:100%;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(138,175,212,.12);
+  border-radius:14px;
+  padding:22px 20px;
+  margin-bottom:10px;
+  animation:fadeUp .6s .4s ease both;
+}
+.about-title{
+  font-family:var(--ff-title);
+  font-size:16px;
+  color:var(--white);
+  margin-bottom:10px;
+}
+.about-text{font-size:13px;color:var(--silver);line-height:1.7;margin-bottom:14px;}
+.about-flags{display:flex;gap:6px;flex-wrap:wrap;}
+.aflag{
+  display:inline-flex;align-items:center;gap:4px;
+  background:rgba(42,111,201,.1);
+  border:1px solid rgba(42,111,201,.2);
+  border-radius:20px;
+  padding:4px 10px;
+  font-size:11px;color:var(--silver);
+}
+
+/* ── FOOTER ── */
+.footer{
+  text-align:center;
+  margin-top:32px;
+  animation:fadeUp .6s .5s ease both;
+}
+.footer-logo{
+  font-family:var(--ff-title);
+  font-size:13px;
+  color:rgba(138,175,212,.4);
+  letter-spacing:2px;
+  margin-bottom:6px;
+}
+.footer-links{display:flex;gap:16px;justify-content:center;}
+.footer-links a{font-size:11px;color:rgba(138,175,212,.35);text-decoration:none;}
+.footer-links a:hover{color:var(--silver);}
+
+/* ── LANG CONTENT ── */
+.lang-content{display:none;width:100%;}
+.lang-content.active{display:contents;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ── MOBILE FINE-TUNE ── */
+@media(max-width:400px){
+  .diag-title{font-size:20px;}
+  .ebooks-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-ring">⚖️</div>
+    <div class="brand-name">HRA JUS DIGITAL</div>
+    <div class="brand-tagline">Data Protection &amp; Privacy Law</div>
+    <div class="verified">✦ Especialistas em Proteção de Dados</div>
+  </div>
+
+  <!-- LANG SELECTOR -->
+  <div class="lang-bar">
+    <div class="lang-btn active" onclick="setLang('pt')">
+      <span class="flag">🇧🇷</span>
+      <span class="lname">Português</span>
+    </div>
+    <div class="lang-btn" onclick="setLang('en')">
+      <span class="flag">🇺🇸🇬🇧</span>
+      <span class="lname">English</span>
+    </div>
+    <div class="lang-btn" onclick="setLang('es')">
+      <span class="flag">🌎</span>
+      <span class="lname">Español</span>
+    </div>
+  </div>
+
+  <!-- ══ PORTUGUÊS ══ -->
+  <div class="lang-content active" id="lang-pt">
+
+    <!-- DIAGNÓSTICO -->
+    <div class="sec-label">⚡ Comece aqui — gratuito</div>
+    <a class="diag-card" href="#diagnostico">
+      <div class="diag-tag">✅ 100% Gratuito · 2 minutos</div>
+      <div class="diag-title">Diagnóstico de Proteção de Dados</div>
+      <div class="diag-sub">Descubra se sua empresa está em risco com a LGPD. Resultado imediato, sem cadastro.</div>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;">
+        <div class="diag-btn">🔍 Fazer diagnóstico →</div>
+        <div class="diag-free">🎁 Totalmente grátis</div>
+      </div>
+    </a>
+
+    <!-- EBOOKS -->
+    <div class="sec-label" style="margin-top:8px;">📚 Ebooks — LGPD</div>
+    <div class="ebooks-grid">
+      <a class="ebook-card" href="#ebooks">
+        <div class="ebook-flag">🇧🇷</div>
+        <div class="ebook-law">LGPD</div>
+        <div class="ebook-title">Guia LGPD para Pequenas Empresas</div>
+        <div class="ebook-price">R$ 27</div>
+        <div class="ebook-from">Introdutório</div>
+      </a>
+      <a class="ebook-card" href="#ebooks">
+        <div class="ebook-flag">🇧🇷</div>
+        <div class="ebook-law">LGPD Avançado</div>
+        <div class="ebook-title">Compliance LGPD Completo</div>
+        <div class="ebook-price">R$ 147</div>
+        <div class="ebook-from">Completo</div>
+      </a>
+    </div>
+
+    <!-- KIT ADEQUAÇÃO -->
+    <div class="sec-label">🛡️ Adequação completa</div>
+    <a class="link-card" href="#kits" style="animation-delay:.3s">
+      <div class="card-icon icon-kit">📋</div>
+      <div class="card-body">
+        <div class="card-title">Kit Adequação LGPD</div>
+        <div class="card-sub">Política de privacidade, cookies, DPA e RIPD — documentos prontos para sua empresa</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;">
+        <div class="card-badge badge-paid">A partir de R$ 197</div>
+        <div class="card-arrow">›</div>
+      </div>
+    </a>
+
+    <!-- WHATSAPP -->
+    <a class="link-card" href="https://wa.me/55SEUNUMERO?text=Olá!%20Vim%20pelo%20Instagram%20e%20quero%20saber%20mais%20sobre%20proteção%20de%20dados." target="_blank" style="animation-delay:.35s">
+      <div class="card-icon icon-wa">💬</div>
+      <div class="card-body">
+        <div class="card-title">Fale com um especialista</div>
+        <div class="card-sub">Tire dúvidas sobre LGPD, adequação e compliance — direto no WhatsApp</div>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <!-- SOBRE -->
+    <div class="about-card">
+      <div class="about-title">Sobre a HRA Jus Digital</div>
+      <div class="about-text">Somos especialistas em proteção de dados e privacidade digital. Ajudamos empresas de todos os tamanhos a se adequarem à LGPD, GDPR e às leis de privacidade dos EUA — com documentos, diagnósticos e consultoria especializada.</div>
+      <div class="about-flags">
+        <span class="aflag">🇧🇷 LGPD</span>
+        <span class="aflag">🇺🇸 CCPA</span>
+        <span class="aflag">🇬🇧 UK GDPR</span>
+        <span class="aflag">🇪🇺 EU GDPR</span>
+        <span class="aflag">🌎 LATAM</span>
+      </div>
+    </div>
+
+  </div><!-- /pt -->
+
+  <!-- ══ ENGLISH ══ -->
+  <div class="lang-content" id="lang-en">
+
+    <div class="sec-label">⚡ Start here — free</div>
+    <a class="diag-card" href="#diagnostico">
+      <div class="diag-tag">✅ 100% Free · 2 minutes</div>
+      <div class="diag-title">Data Privacy Diagnostic</div>
+      <div class="diag-sub">Find out if your business is at risk under CCPA, UK GDPR or EU GDPR. Instant result, no sign-up.</div>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;">
+        <div class="diag-btn">🔍 Run free diagnostic →</div>
+        <div class="diag-free">🎁 Completely free</div>
+      </div>
+    </a>
+
+    <div class="sec-label" style="margin-top:8px;">📚 Ebooks — Privacy Law</div>
+    <div class="ebooks-grid">
+      <a class="ebook-card" href="#ebooks">
+        <div class="ebook-flag">🇺🇸</div>
+        <div class="ebook-law">CCPA</div>
+        <div class="ebook-title">CCPA Guide for Small Business</div>
+        <div class="ebook-price">USD 19</div>
+        <div class="ebook-from">Intro level</div>
+      </a>
+      <a class="ebook-card" href="#ebooks">
+        <div class="ebook-flag">🇬🇧</div>
+        <div class="ebook-law">UK GDPR</div>
+        <div class="ebook-title">UK GDPR Full Compliance Guide</div>
+        <div class="ebook-price">GBP 37</div>
+        <div class="ebook-from">Advanced</div>
+      </a>
+    </div>
+
+    <div class="sec-label">🛡️ Full compliance kit</div>
+    <a class="link-card" href="#kits">
+      <div class="card-icon icon-kit">📋</div>
+      <div class="card-body">
+        <div class="card-title">Privacy Compliance Kit</div>
+        <div class="card-sub">Privacy Policy, Cookie Banner, DPA & more — ready-made documents for your business</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;">
+        <div class="card-badge badge-paid">From USD 97</div>
+        <div class="card-arrow">›</div>
+      </div>
+    </a>
+
+    <a class="link-card" href="https://wa.me/55SEUNUMERO?text=Hello!%20I%20found%20you%20on%20Instagram%20and%20I'd%20like%20to%20know%20more%20about%20data%20privacy%20compliance." target="_blank">
+      <div class="card-icon icon-wa">💬</div>
+      <div class="card-body">
+        <div class="card-title">Talk to a specialist</div>
+        <div class="card-sub">Ask about GDPR, CCPA compliance or data protection documents</div>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <div class="about-card">
+      <div class="about-title">About HRA Jus Digital</div>
+      <div class="about-text">We are data protection and digital privacy specialists. We help businesses of all sizes comply with LGPD, GDPR, CCPA and Latin American privacy laws — with documents, diagnostics and expert consulting.</div>
+      <div class="about-flags">
+        <span class="aflag">🇧🇷 LGPD</span>
+        <span class="aflag">🇺🇸 CCPA</span>
+        <span class="aflag">🇬🇧 UK GDPR</span>
+        <span class="aflag">🇪🇺 EU GDPR</span>
+        <span class="aflag">🌎 LATAM</span>
+      </div>
+    </div>
+
+  </div><!-- /en -->
+
+  <!-- ══ ESPAÑOL ══ -->
+  <div class="lang-content" id="lang-es">
+
+    <div class="sec-label">⚡ Empieza aquí — gratis</div>
+    <a class="diag-card" href="#diagnostico">
+      <div class="diag-tag">✅ 100% Gratis · 2 minutos</div>
+      <div class="diag-title">Diagnóstico de Protección de Datos</div>
+      <div class="diag-sub">Descubre si tu empresa está en riesgo según la ley de tu país. Resultado inmediato, sin registro.</div>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;">
+        <div class="diag-btn">🔍 Hacer diagnóstico →</div>
+        <div class="diag-free">🎁 Totalmente gratis</div>
+      </div>
+    </a>
+
+    <div class="sec-label" style="margin-top:8px;">📚 Ebooks — Privacidad</div>
+    <div class="ebooks-grid">
+      <a class="ebook-card" href="#ebooks">
+        <div class="ebook-flag">🇲🇽</div>
+        <div class="ebook-law">LFPDPPP</div>
+        <div class="ebook-title">Guía LFPDPPP para PYMEs</div>
+        <div class="ebook-price">MXN 199</div>
+        <div class="ebook-from">Introductorio</div>
+      </a>
+      <a class="ebook-card" href="#ebooks">
+        <div class="ebook-flag">🌎</div>
+        <div class="ebook-law">LATAM</div>
+        <div class="ebook-title">Privacidad de Datos en América Latina</div>
+        <div class="ebook-price">USD 27</div>
+        <div class="ebook-from">Completo</div>
+      </a>
+    </div>
+
+    <div class="sec-label">🛡️ Kit de adecuación</div>
+    <a class="link-card" href="#kits">
+      <div class="card-icon icon-kit">📋</div>
+      <div class="card-body">
+        <div class="card-title">Kit Cumplimiento de Privacidad</div>
+        <div class="card-sub">Política de privacidad, cookies, contratos DPA — documentos listos para tu empresa</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;">
+        <div class="card-badge badge-paid">Desde USD 97</div>
+        <div class="card-arrow">›</div>
+      </div>
+    </a>
+
+    <a class="link-card" href="https://wa.me/55SEUNUMERO?text=Hola!%20Te%20encontré%20en%20Instagram%20y%20quiero%20saber%20más%20sobre%20protección%20de%20datos." target="_blank">
+      <div class="card-icon icon-wa">💬</div>
+      <div class="card-body">
+        <div class="card-title">Habla con un especialista</div>
+        <div class="card-sub">Consultas sobre cumplimiento, privacidad y documentos legales</div>
+      </div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <div class="about-card">
+      <div class="about-title">Sobre HRA Jus Digital</div>
+      <div class="about-text">Somos especialistas en protección de datos y privacidad digital. Ayudamos a empresas de todos los tamaños a cumplir con LFPDPPP, Ley 1581, Ley 25.326, GDPR y más — con documentos, diagnósticos y asesoría experta.</div>
+      <div class="about-flags">
+        <span class="aflag">🇲🇽 LFPDPPP</span>
+        <span class="aflag">🇦🇷 Ley 25.326</span>
+        <span class="aflag">🇨🇴 Ley 1581</span>
+        <span class="aflag">🇨🇱 Ley 21.719</span>
+        <span class="aflag">🇪🇸 GDPR</span>
+      </div>
+    </div>
+
+  </div><!-- /es -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">HRA JUS DIGITAL</div>
+    <div class="footer-links">
+      <a href="#">Política de Privacidade</a>
+      <a href="#">Termos de Uso</a>
+      <a href="https://instagram.com/hra_jus_digital" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+<script>
+function setLang(lang) {
+  // update buttons
+  document.querySelectorAll('.lang-btn').forEach((b,i) => {
+    b.classList.toggle('active', ['pt','en','es'][i] === lang);
+  });
+  // show/hide content
+  ['pt','en','es'].forEach(l => {
+    const el = document.getElementById('lang-'+l);
+    if(el) el.classList.toggle('active', l === lang);
+  });
+}
+</script>
+</body>
+</html>
