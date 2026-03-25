@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO META TAGS -->
+<title>Kit LGPD Básico — Documentos prontos para adequar sua empresa | HRA Jus Digital</title>
+<meta name="description" content="Kit LGPD completo com 7 documentos editáveis: Política de Privacidade, Cookies, Termos de Uso, DPA, RIPD, DPO e Formulário de Consentimento. Adeque sua empresa à LGPD por R$ 147.">
+<meta name="keywords" content="kit LGPD, política de privacidade, adequação LGPD, documentos LGPD, LGPD pequenas empresas, MEI LGPD, e-commerce LGPD, DPO, RIPD, termos de uso LGPD">
+<meta name="author" content="HRA Jus Digital">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://heitorhranet-stack.github.io/hra-jus-digital/kit-lgpd.html">
+
+<!-- OPEN GRAPH (WhatsApp, Facebook) -->
+<meta property="og:title" content="Kit LGPD Básico — 7 documentos prontos para sua empresa">
+<meta property="og:description" content="Política de Privacidade, Cookies, DPA, RIPD e mais. Adequação LGPD completa por R$ 147.">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://heitorhranet-stack.github.io/hra-jus-digital/kit-lgpd.html">
+<meta property="og:site_name" content="HRA Jus Digital">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kit LGPD Básico — HRA Jus Digital">
+<meta name="twitter:description" content="7 documentos editáveis para adequar sua empresa à LGPD. R$ 147.">
+
+<!-- SCHEMA.ORG (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kit LGPD Básico",
+  "description": "Kit completo com 7 documentos editáveis para adequação à LGPD: Política de Privacidade, Aviso de Cookies, Termos de Uso, Contrato DPA, RIPD, Nomeação DPO e Formulário de Consentimento.",
+  "brand": { "@type": "Brand", "name": "HRA Jus Digital" },
+  "offers": {
+    "@type": "Offer",
+    "price": "147.00",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "seller": { "@type": "Organization", "name": "HRA Jus Digital" }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --navy:   #0B1A2E;
+  --blue:   #1A3A6B;
+  --accent: #2A6FC9;
+  --silver: #8AAFD4;
+  --light:  #D0E4F7;
+  --cream:  #F4F8FD;
+  --white:  #FFFFFF;
+  --red:    #C0392B;
+  --green:  #1a8a4a;
+  --gold:   #C9A84C;
+  --ff-serif: 'Libre Baskerville', Georgia, serif;
+  --ff-sans:  'IBM Plex Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  font-family: var(--ff-sans);
+  color: var(--navy);
+  overflow-x: hidden;
+}
+
+/* ── STICKY TOP BAR ── */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--navy);
+  border-bottom: 2px solid var(--gold);
+  padding: 10px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  animation: slideDown .4s ease both;
+}
+.topbar-left { display: flex; align-items: center; gap: 8px; }
+.topbar-logo { font-family: var(--ff-serif); font-size: 13px; color: var(--gold); letter-spacing: 2px; }
+.topbar-cta {
+  background: var(--gold); color: var(--navy);
+  border: none; border-radius: 6px; padding: 8px 18px;
+  font-family: var(--ff-sans); font-size: 12px; font-weight: 700;
+  cursor: pointer; text-decoration: none; letter-spacing: .5px;
+  transition: all .2s; white-space: nowrap;
+}
+.topbar-cta:hover { background: #e0b840; transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  padding: 100px 20px 60px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(42,111,201,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,111,201,.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(42,111,201,.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 760px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(201,168,76,.15);
+  border: 1px solid rgba(201,168,76,.4);
+  border-radius: 20px; padding: 5px 14px;
+  font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: fadeUp .5s ease both;
+}
+.hero-title {
+  font-family: var(--ff-serif);
+  font-size: clamp(28px, 5vw, 48px);
+  color: var(--white); line-height: 1.15;
+  margin-bottom: 16px;
+  animation: fadeUp .5s .1s ease both;
+}
+.hero-title span { color: var(--gold); }
+.hero-answer {
+  font-size: 17px; color: var(--light);
+  line-height: 1.75; max-width: 620px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,.06);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  animation: fadeUp .5s .15s ease both;
+}
+.hero-answer strong { color: var(--gold); }
+.hero-sub {
+  font-size: 17px; color: var(--silver);
+  line-height: 1.7; max-width: 600px;
+  margin-bottom: 32px;
+  animation: fadeUp .5s .15s ease both;
+}
+.hero-sub strong { color: var(--light); }
+
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 36px;
+  animation: fadeUp .5s .2s ease both;
+}
+.pill {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 20px; padding: 6px 14px;
+  font-size: 12px; color: var(--light);
+}
+
+.hero-price-box {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(201,168,76,.3);
+  border-radius: 16px; padding: 28px 32px;
+  display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  animation: fadeUp .5s .25s ease both;
+}
+.price-left {}
+.price-was {
+  font-size: 14px; color: var(--silver);
+  text-decoration: line-through; margin-bottom: 4px;
+}
+.price-now {
+  font-family: var(--ff-serif);
+  font-size: 52px; font-weight: 700; color: var(--gold);
+  line-height: 1;
+}
+.price-now span { font-size: 24px; }
+.price-note { font-size: 12px; color: var(--silver); margin-top: 6px; }
+.price-right { display: flex; flex-direction: column; gap: 10px; }
+
+.btn-buy {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: var(--gold); color: var(--navy);
+  border: none; border-radius: 10px; padding: 18px 36px;
+  font-family: var(--ff-sans); font-size: 15px; font-weight: 700;
+  cursor: pointer; text-decoration: none;
+  transition: all .2s; white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(201,168,76,.3);
+}
+.btn-buy:hover { background: #e0b840; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,168,76,.4); }
+
+.btn-diag {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: transparent; color: var(--silver);
+  border: 1px solid rgba(255,255,255,.15); border-radius: 10px;
+  padding: 12px 24px; font-family: var(--ff-sans); font-size: 13px;
+  cursor: pointer; text-decoration: none; transition: all .2s;
+}
+.btn-diag:hover { border-color: var(--accent); color: var(--light); }
+
+.guarantee-line {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: rgba(138,175,212,.6); margin-top: 8px;
+}
+
+/* ── SECTION ── */
+.section { padding: 60px 20px; }
+.section-inner { max-width: 760px; margin: 0 auto; }
+.section-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--ff-serif);
+  font-size: clamp(22px, 4vw, 34px);
+  color: var(--navy); line-height: 1.2;
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 15px; color: #4A6580;
+  line-height: 1.75; margin-bottom: 36px;
+}
+
+/* ── RISK SECTION ── */
+.risk-section { background: #FFF8F7; border-top: 4px solid var(--red); }
+.risk-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px; margin-bottom: 32px;
+}
+.risk-card {
+  background: var(--white);
+  border: 1px solid #F5C0B8;
+  border-radius: 12px; padding: 20px;
+}
+.risk-icon { font-size: 28px; margin-bottom: 10px; }
+.risk-title { font-size: 14px; font-weight: 700; color: var(--red); margin-bottom: 6px; }
+.risk-desc { font-size: 13px; color: #666; line-height: 1.55; }
+
+.fine-box {
+  background: var(--navy);
+  border-radius: 14px; padding: 28px 32px;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.fine-num {
+  font-family: var(--ff-serif); font-size: 42px;
+  font-weight: 700; color: var(--gold); white-space: nowrap;
+}
+.fine-text { font-size: 14px; color: var(--silver); line-height: 1.65; }
+.fine-text strong { color: var(--white); }
+
+/* ── DOCS SECTION ── */
+.docs-section { background: var(--white); }
+.doc-list { display: flex; flex-direction: column; gap: 12px; }
+.doc-item {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: var(--cream);
+  border: 1px solid rgba(42,111,201,.15);
+  border-radius: 12px; padding: 18px 20px;
+  transition: all .2s;
+}
+.doc-item:hover { border-color: var(--accent); background: #EBF4FF; }
+.doc-num {
+  min-width: 36px; height: 36px;
+  background: var(--accent); color: var(--white);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700;
+}
+.doc-body { flex: 1; }
+.doc-name { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.doc-desc { font-size: 13px; color: #4A6580; line-height: 1.5; }
+.doc-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 1px;
+  padding: 3px 9px; border-radius: 10px;
+  background: rgba(26,138,74,.1); color: var(--green);
+  border: 1px solid rgba(26,138,74,.2);
+  white-space: nowrap; align-self: flex-start; margin-top: 2px;
+}
+
+/* ── BONUS ── */
+.bonus-section { background: linear-gradient(135deg, #0B1A2E 0%, #1A3A6B 100%); }
+.bonus-card {
+  background: rgba(255,255,255,.06);
+  border: 2px solid var(--gold);
+  border-radius: 16px; padding: 28px;
+  display: flex; align-items: flex-start; gap: 20px;
+}
+.bonus-icon {
+  width: 56px; height: 56px; min-width: 56px;
+  background: rgba(201,168,76,.15);
+  border: 1px solid rgba(201,168,76,.3);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+}
+.bonus-label {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 6px;
+}
+.bonus-title { font-family: var(--ff-serif); font-size: 20px; color: var(--white); margin-bottom: 8px; }
+.bonus-desc { font-size: 13px; color: var(--silver); line-height: 1.65; }
+.bonus-value {
+  font-family: var(--ff-serif); font-size: 16px;
+  color: var(--gold); margin-top: 12px;
+  text-decoration: line-through; opacity: .7;
+}
+.bonus-free {
+  font-size: 13px; font-weight: 700; color: var(--green);
+  background: rgba(26,138,74,.15); border: 1px solid rgba(26,138,74,.3);
+  border-radius: 20px; padding: 3px 12px; display: inline-block; margin-top: 6px;
+}
+
+/* ── FOR WHO ── */
+.forwho-section { background: var(--cream); }
+.forwho-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+.forwho-card {
+  background: var(--white);
+  border: 1px solid rgba(42,111,201,.15);
+  border-radius: 12px; padding: 20px;
+  text-align: center; transition: all .2s;
+}
+.forwho-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+.forwho-icon { font-size: 32px; margin-bottom: 10px; }
+.forwho-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.forwho-desc { font-size: 12px; color: #4A6580; line-height: 1.5; }
+
+/* ── CHECKLIST ── */
+.check-list { display: flex; flex-direction: column; gap: 10px; }
+.check-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; color: var(--navy); line-height: 1.5;
+}
+.check-icon { color: var(--green); font-size: 18px; min-width: 22px; margin-top: 1px; }
+.cross-icon { color: var(--red); font-size: 18px; min-width: 22px; margin-top: 1px; }
+
+/* ── PRICE CTA ── */
+.price-section {
+  background: var(--navy);
+  text-align: center; padding: 60px 20px;
+}
+.price-section-inner { max-width: 560px; margin: 0 auto; }
+.price-section .section-title { color: var(--white); margin-bottom: 8px; }
+.price-section .section-sub { color: var(--silver); margin-bottom: 32px; }
+
+.big-price {
+  font-family: var(--ff-serif); font-size: 72px;
+  font-weight: 700; color: var(--gold); line-height: 1;
+  margin: 16px 0 8px;
+}
+.big-price span { font-size: 32px; }
+.price-was2 {
+  font-size: 16px; color: rgba(138,175,212,.5);
+  text-decoration: line-through; margin-bottom: 4px;
+}
+.price-note2 { font-size: 13px; color: var(--silver); margin-bottom: 28px; }
+
+.urgency-bar {
+  background: rgba(192,57,43,.15);
+  border: 1px solid rgba(192,57,43,.3);
+  border-radius: 10px; padding: 12px 20px;
+  font-size: 13px; color: #F09090;
+  margin-bottom: 24px; display: flex; align-items: center;
+  justify-content: center; gap: 8px;
+}
+
+.guarantee-box {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(26,138,74,.1);
+  border: 1px solid rgba(26,138,74,.25);
+  border-radius: 12px; padding: 16px 20px;
+  margin-top: 20px; text-align: left;
+}
+.guarantee-icon { font-size: 32px; }
+.guarantee-text { font-size: 13px; color: var(--silver); line-height: 1.6; }
+.guarantee-text strong { color: var(--light); }
+
+/* ── FAQ ── */
+.faq-section { background: var(--white); }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  border: 1px solid rgba(42,111,201,.15);
+  border-radius: 12px; overflow: hidden;
+}
+.faq-q {
+  padding: 16px 20px;
+  font-size: 14px; font-weight: 600; color: var(--navy);
+  cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; user-select: none;
+  transition: background .2s;
+}
+.faq-q:hover { background: var(--cream); }
+.faq-q .arrow { color: var(--accent); transition: transform .3s; font-size: 18px; }
+.faq-q.open .arrow { transform: rotate(180deg); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height .35s ease, padding .3s;
+  font-size: 13px; color: #4A6580; line-height: 1.7;
+  padding: 0 20px;
+}
+.faq-a.open { max-height: 300px; padding: 0 20px 16px; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy);
+  border-top: 1px solid rgba(42,111,201,.2);
+  padding: 32px 20px; text-align: center;
+}
+.footer-logo { font-family: var(--ff-serif); font-size: 14px; color: var(--gold); letter-spacing: 2px; margin-bottom: 8px; }
+.footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+.footer-link { font-size: 12px; color: var(--silver); text-decoration: none; transition: color .2s; }
+.footer-link:hover { color: var(--accent); }
+.footer-copy { font-size: 11px; color: rgba(138,175,212,.4); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 560px) {
+  .hero-price-box { flex-direction: column; }
+  .price-right { width: 100%; }
+  .btn-buy { width: 100%; }
+  .fine-box { flex-direction: column; gap: 12px; }
+  .bonus-card { flex-direction: column; }
+  .topbar-logo { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span>⚖️</span>
+    <span class="topbar-logo">HRA JUS DIGITAL</span>
+  </div>
+  <a href="#comprar" class="topbar-cta">🛒 Comprar por R$ 147 →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">⚖️ Kit LGPD Básico — Lançamento</div>
+    <h1 class="hero-title">
+      Quanto custa adequar sua empresa à LGPD agora —
+      e quanto custa <span>não fazer isso?</span>
+    </h1>
+    <p class="hero-answer">
+      Adequar custa <strong>R$ 147.</strong> Não adequar pode custar até
+      <strong>R$ 50 milhões em multas</strong>, mais honorários advocatícios,
+      processo administrativo, desgaste da sua marca e anos de dor de cabeça.
+      A conta é simples — e a decisão também.
+    </p>
+    <p class="hero-sub">
+      Com o Kit LGPD Básico você recebe <strong>7 documentos editáveis</strong>
+      prontos para personalizar e usar — sem advogado caro, sem complicação.
+    </p>
+    <div class="hero-pills">
+      <span class="pill">✅ 7 documentos Word editáveis</span>
+      <span class="pill">⚡ Acesso imediato</span>
+      <span class="pill">🔒 Juridicamente sólido</span>
+      <span class="pill">🎁 Bônus: Checklist LGPD</span>
+    </div>
+    <div class="hero-price-box" id="comprar">
+      <div class="price-left">
+        <div class="price-was">De R$ 197</div>
+        <div class="price-now"><span>R$</span> 147</div>
+        <div class="price-note">Preço de lançamento · Pagamento único · Acesso vitalício</div>
+      </div>
+      <div class="price-right">
+        <a href="LINK_HOTMART_AQUI" class="btn-buy" target="_blank">
+          🛒 Quero o Kit LGPD agora →
+        </a>
+        <a href="diagnostico.html" class="btn-diag">
+          🔍 Primeiro fazer o diagnóstico grátis
+        </a>
+        <div class="guarantee-line">🛡️ Garantia de 7 dias ou seu dinheiro de volta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RISCO -->
+<section class="section risk-section">
+  <div class="section-inner">
+    <div class="section-label">⚠ O risco é real</div>
+    <h2 class="section-title">A ANPD já está autuando.<br>Você está em risco se…</h2>
+    <div class="risk-grid">
+      <div class="risk-card">
+        <div class="risk-icon">🌐</div>
+        <div class="risk-title">Tem site ou loja virtual</div>
+        <div class="risk-desc">Todo site que coleta dados (e-mail, nome, IP) precisa de Política de Privacidade e Aviso de Cookies.</div>
+      </div>
+      <div class="risk-card">
+        <div class="risk-icon">📧</div>
+        <div class="risk-title">Usa e-mail marketing</div>
+        <div class="risk-desc">Lista de contatos, newsletter ou disparos de e-mail exigem consentimento documentado e base legal.</div>
+      </div>
+      <div class="risk-card">
+        <div class="risk-icon">💳</div>
+        <div class="risk-title">Processa pagamentos</div>
+        <div class="risk-desc">Dados de clientes passam por gateways de pagamento — você precisa de contrato DPA com esses fornecedores.</div>
+      </div>
+      <div class="risk-card">
+        <div class="risk-icon">👥</div>
+        <div class="risk-title">Tem cadastro de clientes</div>
+        <div class="risk-desc">Qualquer base de dados com nome, CPF, telefone ou e-mail está sujeita às regras da LGPD.</div>
+      </div>
+    </div>
+    <div class="fine-box">
+      <div class="fine-num">R$ 50M</div>
+      <div class="fine-text">
+        É o <strong>teto de multa por infração</strong> previsto na LGPD.
+        A ANPD já aplicou sanções em empresas de todos os tamanhos — inclusive MEIs e pequenas empresas.
+        A <strong>ignorância da lei não exclui responsabilidade</strong> e não é aceita como defesa.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTOS -->
+<section class="section docs-section">
+  <div class="section-inner">
+    <div class="section-label">📦 O que você recebe</div>
+    <h2 class="section-title">7 documentos completos,<br>prontos para personalizar</h2>
+    <p class="section-sub">Todos em formato Word (.docx) editável. Campos em vermelho indicam onde preencher com os dados da sua empresa. Inclui instruções detalhadas em cada documento.</p>
+    <div class="doc-list">
+      <div class="doc-item">
+        <div class="doc-num">1</div>
+        <div class="doc-body">
+          <div class="doc-name">Política de Privacidade</div>
+          <div class="doc-desc">Documento completo cobrindo coleta, finalidade, base legal, direitos dos titulares, DPO e segurança. Obrigatório para qualquer site ou app que coleta dados.</div>
+        </div>
+        <div class="doc-tag">Obrigatório</div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-num">2</div>
+        <div class="doc-body">
+          <div class="doc-name">Aviso e Política de Cookies</div>
+          <div class="doc-desc">Explica os tipos de cookies utilizados, base legal, como o usuário pode gerenciar preferências e prazo de retenção.</div>
+        </div>
+        <div class="doc-tag">Obrigatório</div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-num">3</div>
+        <div class="doc-body">
+          <div class="doc-name">Termos e Condições de Uso</div>
+          <div class="doc-desc">Regula a relação entre sua empresa e os usuários do site, incluindo propriedade intelectual, limitação de responsabilidade e foro.</div>
+        </div>
+        <div class="doc-tag">Recomendado</div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-num">4</div>
+        <div class="doc-body">
+          <div class="doc-name">Contrato DPA com Fornecedores</div>
+          <div class="doc-desc">Data Processing Agreement para assinar com fornecedores que acessam dados dos seus clientes (gateways, plataformas, ERPs). Exigido pelo art. 39 da LGPD.</div>
+        </div>
+        <div class="doc-tag">Obrigatório</div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-num">5</div>
+        <div class="doc-body">
+          <div class="doc-name">RIPD — Registro de Atividades de Tratamento</div>
+          <div class="doc-desc">Planilha estruturada para documentar todas as atividades de tratamento de dados da empresa. Exigido pelo art. 37 da LGPD e cobrado pela ANPD em fiscalizações.</div>
+        </div>
+        <div class="doc-tag">Obrigatório</div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-num">6</div>
+        <div class="doc-body">
+          <div class="doc-name">Termo de Nomeação do DPO</div>
+          <div class="doc-desc">Documento formal de nomeação do Encarregado de Dados, com atribuições, aceite e identificação pública — exigido pelo art. 41 da LGPD.</div>
+        </div>
+        <div class="doc-tag">Obrigatório</div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-num">7</div>
+        <div class="doc-body">
+          <div class="doc-name">Formulário de Consentimento</div>
+          <div class="doc-desc">Modelo para coletar consentimento explícito e documentado dos titulares — essencial para e-mail marketing, cadastros e tratamento de dados sensíveis.</div>
+        </div>
+        <div class="doc-tag">Recomendado</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÔNUS -->
+<section class="section bonus-section">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold)">🎁 Bônus exclusivo</div>
+    <h2 class="section-title" style="color:var(--white); margin-bottom:24px;">Incluído gratuitamente</h2>
+    <div class="bonus-card">
+      <div class="bonus-icon">✅</div>
+      <div>
+        <div class="bonus-label">Bônus</div>
+        <div class="bonus-title">Checklist LGPD Completo</div>
+        <div class="bonus-desc">Lista de verificação com todos os requisitos da LGPD para pequenas empresas, e-commerces e MEIs. Saiba exatamente o que verificar, na ordem certa, antes de publicar seus documentos. Inclui checklist de site, checklist de e-mail marketing e checklist de fornecedores.</div>
+        <div class="bonus-value">Valor: R$ 37</div>
+        <div class="bonus-free">🎁 Grátis no Kit de Lançamento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="section forwho-section">
+  <div class="section-inner">
+    <div class="section-label">👥 Para quem é</div>
+    <h2 class="section-title">Este kit é para você se…</h2>
+    <div class="forwho-grid">
+      <div class="forwho-card">
+        <div class="forwho-icon">🏪</div>
+        <div class="forwho-title">MEI ou Autônomo</div>
+        <div class="forwho-desc">Você tem um negócio solo e não quer pagar caro por documentos jurídicos que pode personalizar sozinho.</div>
+      </div>
+      <div class="forwho-card">
+        <div class="forwho-icon">🛒</div>
+        <div class="forwho-title">E-commerce</div>
+        <div class="forwho-desc">Você vende online e precisa estar em conformidade para não ter sua loja derrubada por reclamação de consumidor.</div>
+      </div>
+      <div class="forwho-card">
+        <div class="forwho-icon">🏢</div>
+        <div class="forwho-title">Pequena Empresa</div>
+        <div class="forwho-desc">Sua empresa está crescendo e você sabe que precisa se regularizar antes de escalar — sem gastar uma fortuna.</div>
+      </div>
+      <div class="forwho-card">
+        <div class="forwho-icon">💼</div>
+        <div class="forwho-title">Profissional Liberal</div>
+        <div class="forwho-desc">Médico, contador, advogado, psicólogo — você coleta dados sensíveis de pacientes e clientes e precisa de documentação.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px;">
+      <div class="section-label">✅ Com o kit você resolve</div>
+      <div class="check-list" style="margin-top:16px;">
+        <div class="check-item"><span class="check-icon">✓</span>Publicar a Política de Privacidade no seu site ainda hoje</div>
+        <div class="check-item"><span class="check-icon">✓</span>Ativar o aviso de cookies conforme a lei</div>
+        <div class="check-item"><span class="check-icon">✓</span>Assinar contratos DPA com seus fornecedores</div>
+        <div class="check-item"><span class="check-icon">✓</span>Nomear seu DPO e cumprir o art. 41 da LGPD</div>
+        <div class="check-item"><span class="check-icon">✓</span>Documentar as atividades de tratamento (RIPD)</div>
+        <div class="check-item"><span class="check-icon">✓</span>Coletar consentimento de forma válida e documentada</div>
+        <div class="check-icon" style="margin-top:20px; color:var(--red); font-size:14px; display:flex; gap:8px; align-items:flex-start;">
+          <span>✗</span><span style="color:#666;">Contratar um advogado por R$ 3.000 a R$ 10.000 para fazer os mesmos documentos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE CTA -->
+<section class="price-section">
+  <div class="price-section-inner">
+    <div class="section-label" style="color:var(--gold)">🛒 Oferta de lançamento</div>
+    <h2 class="section-title">Adeque sua empresa hoje.<br>Por muito menos do que imagina.</h2>
+    <div class="price-was2">De R$ 197</div>
+    <div class="big-price"><span>R$</span> 147</div>
+    <div class="price-note2">Pagamento único · Acesso vitalício · Bônus incluído</div>
+    <div class="urgency-bar">
+      🚨 Preço de lançamento por tempo limitado — após o período inicial volta para R$ 197
+    </div>
+    <a href="LINK_HOTMART_AQUI" class="btn-buy" style="width:100%; font-size:16px; padding:20px;" target="_blank">
+      🛒 Quero o Kit LGPD por R$ 147 →
+    </a>
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <div class="guarantee-text">
+        <strong>Garantia incondicional de 7 dias.</strong> Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu dinheiro — sem perguntas, sem burocracia. Pela plataforma Hotmart.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="section-inner">
+    <div class="section-label">❓ Dúvidas frequentes</div>
+    <h2 class="section-title">Perguntas e respostas</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Preciso ter conhecimento jurídico para usar o kit? <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Não. Os documentos foram escritos em linguagem acessível, com campos claramente indicados em vermelho para você preencher com os dados da sua empresa. Cada documento inclui um guia de instruções na primeira página.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Os documentos são realmente válidos juridicamente? <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Sim. Os modelos foram elaborados com base na LGPD (Lei nº 13.709/2018) e nas diretrizes da ANPD. São modelos completos e tecnicamente robustos — o mesmo conteúdo que advogados especializados em proteção de dados produzem para seus clientes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Quanto tempo leva para receber após a compra? <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">O acesso é imediato. Assim que o pagamento é confirmado pela Hotmart, você recebe o link para download por e-mail em menos de 5 minutos.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Posso usar o kit para mais de uma empresa? <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">A licença é de uso pessoal ou interno de uma única empresa. Para empresas adicionais, você precisará adquirir uma nova licença por empresa. Confira os detalhes no Contrato de Licença incluído no kit.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          O kit me deixa 100% adequado à LGPD? <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">O kit cobre os documentos essenciais exigidos pela LGPD e resolve a grande maioria das exigências para pequenas empresas e MEIs. Para adequações complexas (grandes volumes de dados, dados sensíveis, setor de saúde em escala), pode ser necessária consultoria adicional. Faça nosso diagnóstico gratuito para saber exatamente o que sua empresa precisa.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          E se a lei mudar? Os documentos serão atualizados? <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Atualizações motivadas por mudanças legislativas relevantes são comunicadas aos adquirentes pelo canal da Hotmart. Atualizações substanciais podem exigir nova aquisição do kit atualizado.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section style="background:var(--accent); padding:40px 20px; text-align:center;">
+  <div style="max-width:560px; margin:0 auto;">
+    <p style="font-family:var(--ff-serif); font-size:24px; color:white; margin-bottom:8px;">Ainda não tem certeza?</p>
+    <p style="font-size:14px; color:rgba(255,255,255,.8); margin-bottom:20px;">Faça o diagnóstico gratuito primeiro e veja exatamente o que sua empresa precisa.</p>
+    <a href="diagnostico.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:var(--light); border-radius:10px; padding:14px 28px; font-family:var(--ff-sans); font-size:14px; font-weight:600; text-decoration:none; transition:all .2s;">
+      🔍 Diagnóstico gratuito →
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">HRA JUS DIGITAL</div>
+  <div class="footer-links">
+    <a href="index.html" class="footer-link">← Voltar ao início</a>
+    <a href="diagnostico.html" class="footer-link">Diagnóstico gratuito</a>
+    <a href="https://instagram.com/hra_jus_digital" target="_blank" class="footer-link">Instagram</a>
+  </div>
+  <div class="footer-copy">© 2025 HRA Jus Digital — Todos os direitos reservados · Kit LGPD Básico</div>
+</footer>
+
+<script>
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  if (!isOpen) {
+    answer.classList.add('open');
+    el.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
